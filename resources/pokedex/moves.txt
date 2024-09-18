@@ -1,0 +1,306 @@
+Zuffa
+LOTTA
+5
+120
+100
+Chi la usa attacca abbassando la guardia. La propria Difesa e difesa speciale si riducono.
+FISICA
+DANNO_RIDUZIONE_DIFESA_E_DIFESA_SPECIALE_SE_STESSO
+1
+Danzaspada
+NORMALE
+20
+0
+100
+Chi la usa aumenta le proprie statistiche di attacco
+FISICA
+AUMENTA_ATTACCOX2
+1
+Assorbipugno
+LOTTA
+10
+75
+100
+Pugno che assorbe energia. Fa recuperare una quantità di PS pari alla metà del danno inferto.
+FISICA
+DANNO_RECUPERO_HP
+1
+Metaltestata
+ACCIAIO
+15
+80
+100
+Chi la usa colpisce il nemico con la sua testa dura come l'acciaio.
+FISICA
+DANNO
+1
+Nitrocarica
+LOTTA
+20
+50
+100
+Chi la usa si copre di fuoco e attacca il bersaglio. Concentrandosi aumenta, inoltre, la propria Velocità.
+FISICA
+DANNO_AUMENTA_VELOCITA
+1
+Agilita
+PSICO
+20
+0
+100
+Chi la usa raddoppia la propria velocità
+FISICA
+AUMENTA_VELOCITAX2
+1
+Protezione
+NORMALE
+10
+0
+100
+Chi la usa elude tutti gli attacchi
+FISICA
+ANNULLA_DANNI
+4
+Covauova
+NORMALE
+5
+0
+100
+Chi la usa recupera l'80% della salute
+FISICA
+RECUPERO_HP
+1
+Pugnorapido
+LOTTA
+30
+40
+100
+Chi la usa tira un pugno a una velocità impressionante.
+FISICA
+DANNO
+2
+Lanciafiamme
+FUOCO
+15
+90
+100
+Il bersaglio viene colpito da intense fiammate
+FISICA
+DANNO
+1
+Ferroscudo
+LOTTA
+15
+0
+100
+Il corpo di chi la usa si indurisce come il ferro, facendone salire di molto la Difesa
+FISICA
+AUMENTA_DIFESAX2
+1
+Aeroassalto
+VOLANTE
+20
+60
+100
+Chi la usa attacca il bersaglio a grande velocità
+FISICA
+DANNO
+1
+Urtoscuro
+BUIO
+10
+85
+100
+Chi la usa attacca il bersaglio con un’onda d’urto oscura e ne riduce la precisione.
+SPECIALE
+DANNO_RIDUZIONE_PRECISIONE
+1
+Ripicca
+BUIO
+10
+85
+100
+Chi la usa si schianta contro l'avversario con una presenza oscura
+FISICA
+DANNO
+1
+Doppioteam
+NORMALE
+10
+0
+100
+Chi la usa aumenta la propria elusione
+FISICA
+AUMENTA_ELUSIONE
+1
+Tifone
+VOLANTE
+10
+110
+70
+Chi la usa scatena un tifone che infligge grossi danni
+SPECIALE
+DANNO
+1
+Pugnoscarica
+ACCIAIO
+30
+40
+100
+Chi la usa attacca con una scarica di pugni veloci come proiettili. Con questa mossa si colpisce per primi.
+FISICA
+DANNO
+2
+Dragartigli
+DRAGO
+15
+80
+100
+Chi la usa attacca con artigli affilati che graffiano il nemico rapidamente e con grande forza.
+FISICA
+DANNO
+1
+Dragopulsar
+DRAGO
+10
+85
+100
+Chi la usa attacca un'onda d'urto generata spalancando la bocca.
+SPECIALE
+DANNO
+1
+Dragodanza
+DRAGO
+20
+0
+100
+Danza mistica e vigorosa che aumenta l'Attacco e la Velocità di chi la usa.
+FISICA
+AUMENTA_ATTACCO_VELOCITA
+1
+Fulmine
+ELETTRO
+15
+90
+100
+Chi la usa colpisce l'avversario con una scarica di fulmini
+SPECIALE
+DANNO
+1
+Scintilla
+ELETTRO
+20
+65
+100
+Chi la usa colpisce il nemico con una carica elettrica
+FISICA
+DANNO
+1
+Acquagetto
+ACQUA
+30
+40
+100
+Chi la usa si copre di acqua e si schianta verso il nemico. Si colpisce per primi
+FISICA
+DANNO
+1
+Surf
+ACQUA
+15
+90
+100
+Un'onda enorme sommerge il campo di lotta.
+SPECIALE
+DANNO
+1
+Fanghiglia
+TERRA
+10
+90
+85
+Chi la usa attacca con un getto di fango e riduce la precisione dei nemici.
+SPECIALE
+DANNO_RIDUZIONE_PRECISIONE
+1
+Calciardente
+FUOCO
+15
+90
+100
+Chi la usa colpisce il nemico con un potente calcio
+FISICA
+DANNO
+1
+Corposcontro
+NORMALE
+15
+80
+100
+Chi la usa colpisce con il proprio corpo l'avversario.
+FISICA
+DANNO
+1
+Bottintesta
+NORMALE
+15
+70
+100
+Chi la usa colpisce con la propria testa l'avversario.
+FISICA
+DANNO
+1
+Foglielama
+ERBA
+25
+55
+95
+Chi la usa colpisce con delle foglie taglienti l'avversario.
+FISICA
+DANNO
+1
+Idropompa
+ACQUA
+5
+100
+80
+Chi la usa colpisce l'avversario con un potente getto d'acqua.
+SPECIALE
+DANNO
+1
+Terremoto
+TERRA
+10
+100
+100
+Chi la usa genera un forte terremoto.
+FISICA
+DANNO
+1
+Geloraggio
+GHIACCIO
+10
+90
+100
+Chi la usa colpisce l'avversario con un raggio di ghiaccio.
+SPECIALE
+DANNO
+1
+Fogliamagica
+ERBA
+20
+60
+100
+Chi la usa colpisce l'avversario con delle foglie magiche.
+SPECIALE
+DANNO
+1
+Fangobomba
+VELENO
+10
+90
+100
+Chi la usa colpisce l'avversario con una bomba di fango velenoso.
+SPECIALE
+DANNO
+1
