@@ -2,57 +2,122 @@ package view;
 
 import javax.swing.*;
 
-public class SignUpForm extends JFrame{
+import interfaces.menu.LoginObserver;
+
+import java.awt.Color;
+import java.awt.Font;
+
+public class SignUpForm extends JDialog {
+	private LoginObserver observer;
+	private JButton confirmBtn;
+	private JTextField nameField;
+	private JLabel nameLabel;
+	private JLabel passwordLabel;
+	private JLabel usernameLabel;
+	private JTextField usernameField;
+	private JPasswordField passwordField;
 	
-	JTextField usernameField, nameField;
-	JPasswordField passwordField;
-	JComboBox<String> genderField;
-	JLabel usernameLabel, passwordLabel, nameLabel, genderLabel;
-	JButton confirm;
-	String[] genders = {"Maschio","Femmina","Altro"};
-	
-	public SignUpForm() {
+	public SignUpForm(LoginObserver observer) {
+		this.observer = observer;
+		initComponents();
+	}
+
+	public SignUpForm(LoginObserver observer, JFrame frame, String string, boolean b) {
+		super(frame,string,b);
+		this.observer = observer;
+		initComponents();
+	}
+
+	private void initComponents() {
+		getContentPane().setBackground(Color.DARK_GRAY);
 		// creating frame
 		this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		this.setSize(400,550);
 		this.setLocationRelativeTo(null);
-		this.setLayout(null);
 		this.setResizable(false);
 		this.setTitle("Registrazione");
+		getContentPane().setLayout(null);
 		
-		// creating components
-		usernameField = new JTextField();
-		nameField = new JTextField();
-		passwordField = new JPasswordField();
 		usernameLabel = new JLabel("Username");
+		usernameLabel.setForeground(Color.WHITE);
+		usernameLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		usernameLabel.setBounds(150, 71, 79, 14);
+		getContentPane().add(usernameLabel);
+		
+		usernameField = new JTextField();
+		usernameField.setForeground(Color.WHITE);
+		usernameField.setBackground(Color.GRAY);
+		usernameField.setHorizontalAlignment(SwingConstants.CENTER);
+		usernameField.setBounds(30, 111, 319, 31);
+		usernameField.setColumns(10);
+		getContentPane().add(usernameField);
+		
 		passwordLabel = new JLabel("Password");
+		passwordLabel.setForeground(Color.WHITE);
+		passwordLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		passwordLabel.setBounds(150, 186, 79, 14);
+		getContentPane().add(passwordLabel);
+		
+		passwordField = new JPasswordField();
+		passwordField.setForeground(Color.WHITE);
+		passwordField.setBackground(Color.GRAY);
+		passwordField.setHorizontalAlignment(SwingConstants.CENTER);
+		passwordField.setBounds(30, 229, 319, 31);
+		getContentPane().add(passwordField);
+		
 		nameLabel = new JLabel("Nome");
-		genderLabel = new JLabel("Genere");
-		confirm = new JButton("Registrati");
-		genderField = new JComboBox<String>(genders);
+		nameLabel.setForeground(Color.WHITE);
+		nameLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		nameLabel.setBounds(150, 311, 79, 14);
+		getContentPane().add(nameLabel);
 		
-		// setting bounds
-		usernameField.setBounds(170,100,150,30);
-		passwordField.setBounds(170,150,150,30);
-		nameField.setBounds(170,200,150,30);
-		usernameLabel.setBounds(100,100,100,20);
-		passwordLabel.setBounds(100,150,100,20);
-		nameLabel.setBounds(100,200,100,20);
-		genderLabel.setBounds(100,250,100,20);
-		genderField.setBounds(170,250,100,20);
-		confirm.setBounds(170,320,100,30);
+		nameField = new JTextField();
+		nameField.setForeground(Color.WHITE);
+		nameField.setBackground(Color.GRAY);
+		nameField.setHorizontalAlignment(SwingConstants.CENTER);
+		nameField.setBounds(30, 355, 319, 31);
+		getContentPane().add(nameField);
+		nameField.setColumns(10);
 		
-		// adding components
-		this.add(usernameField);
-		this.add(passwordField);
-		this.add(nameField);
-		this.add(usernameLabel);
-		this.add(passwordLabel);
-		this.add(nameLabel);
-		this.add(genderLabel);
-		this.add(confirm);
-		this.add(genderField);
+		confirmBtn = new JButton("Conferma");
+		confirmBtn.setForeground(Color.WHITE);
+		confirmBtn.setBackground(Color.GRAY);
+		confirmBtn.setBounds(132, 461, 112, 23);
+		getContentPane().add(confirmBtn);
 		
-		this.setVisible(true);
+		JLabel lblRegistrati = new JLabel("Registrati");
+		lblRegistrati.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 20));
+		lblRegistrati.setHorizontalAlignment(SwingConstants.CENTER);
+		lblRegistrati.setForeground(Color.WHITE);
+		lblRegistrati.setBounds(132, 27, 112, 33);
+		getContentPane().add(lblRegistrati);
+		initListeners();
+		this.setVisible(true);		
+	}
+	
+	private void initListeners() {
+		this.confirmBtn.addActionListener(e -> {
+			String username = this.usernameField.getText();
+			String password = this.passwordField.getText();
+			String name = this.nameField.getText();
+			observer.register(username, password, name);
+			this.dispose();
+		});
+	}
+
+	public JTextField getUsernameField() {
+		return usernameField;
+	}
+
+	public JTextField getNameField() {
+		return nameField;
+	}
+
+	public JPasswordField getPasswordField() {
+		return passwordField;
+	}
+
+	public JButton getConfirm() {
+		return confirmBtn;
 	}
 }

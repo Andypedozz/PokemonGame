@@ -53,7 +53,7 @@ public class ViewImpl extends JFrame implements View {
 			this.remove(mmPanel);
 			this.mmPanel = null;
 		}
-		this.loginPanel = new LoginPanel(observer.getLoginObserver());
+		this.loginPanel = new LoginPanel(observer.getLoginObserver(),this);
 		this.add(loginPanel);
 		this.setResizable(true);
 		this.revalidate();

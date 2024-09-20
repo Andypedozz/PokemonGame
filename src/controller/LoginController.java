@@ -23,8 +23,8 @@ public class LoginController implements LoginObserver{
 	}
 	
 	@Override
-	public void register(String username, String password, String name, String gender) {
-		if(!username.isBlank() && !password.isBlank() && !name.isBlank() && !gender.isBlank()) {
+	public void register(String username, String password, String name) {
+		if(!username.isBlank() && !password.isBlank() && !name.isBlank()) {
 			try {
 				boolean result = this.model.getLoginManager().register(username, password);
 				if(!result) {

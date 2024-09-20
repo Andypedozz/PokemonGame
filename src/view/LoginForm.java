@@ -158,11 +158,6 @@ public class LoginForm extends JPanel {
 			login();
 		});
 		
-		// listener signUp button
-		this.signUp.addActionListener(e -> {
-			signUp();
-		});
-		
 		// logout logic
 		this.disconnect.addActionListener(e -> {
 			observer.disconnect(id);
@@ -188,6 +183,10 @@ public class LoginForm extends JPanel {
 			});
 		}
 	}
+	
+	public JButton getSignUpBtn() {
+		return this.signUp;
+	}
 
 	private void login() {
 		String username = usernameField.getText();
@@ -198,19 +197,6 @@ public class LoginForm extends JPanel {
 	public void loginFailed() {
 		JFrame frame = new JFrame();
 		JOptionPane.showMessageDialog(frame, "Account non trovato, cambia credenziali");
-	}
-	
-	public void signUp() {
-		SignUpForm sf = new SignUpForm();
-		
-		// sign up logic
-		sf.confirm.addActionListener(e -> {
-			String username = sf.usernameField.getText();
-			String password = sf.passwordField.getText();
-			String name = sf.nameField.getText();
-			String gender = (String)sf.genderField.getSelectedItem();
-			observer.register(username,password,name, gender);
-		});
 	}
 	
 	public void disableButtons() {
